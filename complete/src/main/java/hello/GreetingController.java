@@ -10,7 +10,13 @@ public class GreetingController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
-
+    
+/*
+@RestController annotation, which marks the class as a controller where every method 
+returns a domain object instead of a view. It’s shorthand for @Controller and 
+@ResponseBody rolled together.
+ */
+    // http://localhost:8080/greeting?name=blah, http://localhost:8080/greeting///?name=blah
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
