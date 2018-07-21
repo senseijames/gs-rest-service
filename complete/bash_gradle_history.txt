@@ -1,0 +1,8 @@
+  git clone https://github.com/senseijames/gs-rest-service.git RESTService
+  ls
+  cd RESTService/bin/complete/
+  gradle
+  gradle tasks
+  gradle jar
+  gradle bootRun
+  history > bash_gradle_history.txt
