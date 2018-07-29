@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        // The Maven Central Repository : search.maven.org
         mavenCentral()
     }
     dependencies {
@@ -26,7 +27,12 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.eclipse.persistence:javax.persistence:2.2.0");
+    compile 'org.springframework.data:spring-data-mongodb:2.0.9.RELEASE'
+    compile 'org.springframework.data:spring-data-rest-core:3.0.8.RELEASE'
+    compile 'org.springframework.data:spring-data-commons:2.0.7.RELEASE'
+    // ...
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
 }
